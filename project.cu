@@ -65,7 +65,7 @@ uchar4* mirror_ops(uchar4 *d_inputImageRGBA, size_t numRows, size_t numCols)
 {
     // Set reasonable block size
     const dim3 blockSize(4, 4, 1);
-    // Calculate grid size (make sure to cover all pixels)
+    // Calculate grid size 
     int gridCols = (numCols + blockSize.x - 1) / blockSize.x;
     int gridRows = (numRows + blockSize.y - 1) / blockSize.y;
     const dim3 gridSize(gridCols, gridRows, 1);
